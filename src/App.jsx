@@ -1,12 +1,11 @@
 import "./App.css";
+import Signup from "./pages/signup";
 
 function App() {
   return (
-    <>
-      <p className="text-3xl font-bold underline bg-blue-200">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <Signup />
+    </div>
   );
 }
 
