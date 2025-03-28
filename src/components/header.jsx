@@ -3,10 +3,10 @@ import React from "react";
 
 export default function TopHeader() {
   return (
-    <header className="w-full mb-8 h-12 bg-button flex items-center justify-center bg-black text-white">
-      <div className="container flex justify-between items-center px-4">
+    <header className="font-sans w-full mb-8 h-16 bg-button flex items-center justify-center bg-black text-white">
+      <div className="container flex space-x-10 justify-center items-center">
         <div className="flex items-center gap-2">
-          <p className="font-title-14px-regular text-text text-sm leading-[21px]">
+          <p className="font-title-14px-regular justify-center text-sm leading-[21px]">
             Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
           </p>
           <a
