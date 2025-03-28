@@ -14,11 +14,11 @@ export default function Navbar() {
     { name: "Home", path: "/" },
     { name: "Contact", path: "/contact" },
     { name: "About", path: "/about" },
-    { name: "Sign Up", path: "/signup", underlined: true },
+    { name: "Sign Up", path: "/signup" },
   ];
 
   return (
-    <header className="flex items-center justify-between py-4 px-5">
+    <header className="flex items-center justify-between py-4 px-20">
       {/* Logo */}
       <div className="font-heading-24px-bold font-[700] text-text-2 text-[24px] tracking-[0.72px] leading-[24px]">
         Exclusive
@@ -27,16 +27,16 @@ export default function Navbar() {
       {/* Navigation */}
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="flex items-center gap-12">
-        <span class="absolute bottom-0 left-1/2 w-0 h-1 bg-blue-500 group-hover:animate-underline-grow transform -translate-x-1/2"></span>
           {navItems.map((item) => (
-            <NavigationMenuItem key={item.name}>
+            <NavigationMenuItem key={item.name} className="group">
               <NavigationMenuLink
                 href={item.path}
-                className="flex flex-col items-center"
+                className="flex flex-col items-center relative"
               >
                 <span className="font-title-16px-regular font-[400] text-text-2 text-[16px] tracking-[0] leading-[24px]">
                   {item.name}
                 </span>
+                <span className="absolute bottom-0 left-1/2 w-0 h-1 bg-black group-hover:w-full transition-all duration-300 transform -translate-x-1/2" />
                 {item.underlined && (
                   <div className="w-[61px] h-px opacity-50 bg-black mt-0.5" />
                 )}
