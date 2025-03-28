@@ -18,7 +18,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="flex items-center justify-between py-4">
+    <header className="flex items-center justify-between py-4 px-5">
       {/* Logo */}
       <div className="font-heading-24px-bold font-[700] text-text-2 text-[24px] tracking-[0.72px] leading-[24px]">
         Exclusive
@@ -27,6 +27,7 @@ export default function Navbar() {
       {/* Navigation */}
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="flex items-center gap-12">
+        <span class="absolute bottom-0 left-1/2 w-0 h-1 bg-blue-500 group-hover:animate-underline-grow transform -translate-x-1/2"></span>
           {navItems.map((item) => (
             <NavigationMenuItem key={item.name}>
               <NavigationMenuLink

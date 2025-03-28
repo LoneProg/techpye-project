@@ -71,8 +71,23 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        'underline-grow': {
+          '0%': {
+            width: '0',
+            left: '50%',
+          },
+          '50%': {
+            width: '100%',
+            left: '0',
+          },
+          '100%': {
+            width: '100%',
+            left: '0',
+          },
+        },
       },
       animation: {
+        'underline-grow': 'underline-grow 0.5s ease-out forwards',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
