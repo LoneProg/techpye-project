@@ -18,7 +18,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mt-[-10px] w-full border-b border-gray-200">
       <header className="w-2/3 flex items-center justify-between py-4 mx-auto">
         {/* Logo */}
         <div className="font-heading-24px-bold font-[700] text-text-2 text-[24px] tracking-[0.72px] leading-[24px]">
@@ -27,7 +27,7 @@ export default function Navbar() {
 
         {/* Navigation */}
         <NavigationMenu className="mx-auto">
-          <NavigationMenuList className="flex items-center gap-12">
+          <NavigationMenuList className="flex items-center gap-12 mx-10">
             {navItems.map((item) => (
               <NavigationMenuItem key={item.name} className="group">
                 <NavigationMenuLink
@@ -49,12 +49,14 @@ export default function Navbar() {
 
         {/* Search bar */}
         <div className="flex items-center bg-app-secondary rounded px-5 py-[7px]">
+          <div className="bg-gray-200 flex py-2 px-4">
           <Input
             type="text"
             placeholder="What are you looking for?"
             className="border-0 bg-transparent h-6 p-0 text-[12px] font-title-12px-regular font-[400] text-text-2 opacity-50 focus-visible:ring-0 focus-visible:ring-offset-0"
           />
           <Search className="w-6 h-6 ml-[34px] flex-shrink-0" />
+          </div>
         </div>
       </header>
     </div>
